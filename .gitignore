@@ -9,10 +9,11 @@ __pycache__/
 
 # Jupyter
 .ipynb_checkpoints/
-
+Modelingv1.ipynb
 # Data & models (raw & generated)
 RawData/
-models/
+CleanedData/
+outputs/ 
 
 # Environment variables
 .env
