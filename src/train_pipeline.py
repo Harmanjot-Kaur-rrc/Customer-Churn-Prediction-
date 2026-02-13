@@ -19,10 +19,7 @@ from sklearn.metrics import (
     roc_curve,
 )
 from sklearn.preprocessing import StandardScaler
-from sklearn.ensemble import (
-    RandomForestClassifier,
-    GradientBoostingClassifier
-)
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.neural_network import MLPClassifier
 from sklearn.pipeline import Pipeline
