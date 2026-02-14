@@ -36,7 +36,6 @@ warnings.filterwarnings("ignore", category=ConvergenceWarning)
 
 
 def main():
-
     print("\n Pipeline started...\n")
 
     # Create models directory
@@ -165,7 +164,6 @@ def main():
     print("Training models...\n")
 
     for name, model in models.items():
-
         pipeline = Pipeline([("preprocessor", preprocessor), ("model", model)])
 
         pipeline.fit(X_train, y_train)
@@ -238,7 +236,6 @@ def main():
     # ---------------------------------------------------
 
     if best_model_name == "XGBoost":
-
         model = best_model.named_steps["model"]
         feature_names = best_model.named_steps["preprocessor"].get_feature_names_out()
 
