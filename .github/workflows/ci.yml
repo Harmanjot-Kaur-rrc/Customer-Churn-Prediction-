@@ -30,7 +30,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install pytest flake8 black
+          pip install pytest flake8 black bandit
+      
+      - name: Set PYTHONPATH
+        run: echo "PYTHONPATH=$PWD" >> $GITHUB_ENV
 
       - name: Lint with flake8
         run: |
@@ -39,6 +42,10 @@ jobs:
       - name: Check formatting with Black
         run: |
           black --check src
+
+      - name: Security check with Bandit
+        run: |
+          bandit -r src -ll
 
       - name: Run tests
         run: |
